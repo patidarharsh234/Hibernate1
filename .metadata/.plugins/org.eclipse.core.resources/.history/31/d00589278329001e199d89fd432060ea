@@ -1,0 +1,42 @@
+package com.rays.querys.hql_sql;
+
+import java.util.Iterator;
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.classic.Session;
+
+import com.rays.dto.UserDTO;
+
+public class TestHqlSqlQuery {
+
+	public static void main(String[] args) {
+		SessionFactory sf = new Configuration().configure().buildSessionFactory();
+
+		Session session = sf.openSession();
+		Transaction tx = session.beginTransaction();
+		Query query = session.createSQLQuery("select*from UserDTO");
+
+		List<UserDTO> list = query.list();
+		Iterator<UserDTO> it = list.iterator();
+
+		UserDTO dto;
+		while (it.hasNext()) {
+			dto = (UserDTO) it.next();
+
+			System.out.println(dto.getId());
+			System.out.println(dto.getFirstName());
+			System.out.println(dto.getLastName());
+			System.out.println(dto.getLoginId());
+			System.out.println(dto.getPassword());
+		}
+
+		tx.commit();
+		session.close();
+
+	}
+
+}

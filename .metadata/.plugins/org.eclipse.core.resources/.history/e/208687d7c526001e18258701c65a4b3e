@@ -1,0 +1,11 @@
+package com.rays.auction;
+
+public class TestAuction {
+	public static void main(String[] args) {
+		Bid bid1= new Bid();
+		bid1.setId(1);
+		bid1.setAmount(100);
+		
+	}
+
+}

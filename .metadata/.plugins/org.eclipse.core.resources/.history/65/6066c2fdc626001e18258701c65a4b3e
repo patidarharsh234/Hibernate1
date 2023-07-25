@@ -1,0 +1,31 @@
+package com.rays.auction;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class TestAuction {
+	public static void main(String[] args) {
+		Bid bid1= new Bid();
+		bid1.setId(1);
+		bid1.setAmount(100);
+		bid1.setTimeStamp("x");
+		
+		Bid bid2= new Bid();
+		bid2.setId(1);
+		bid2.setAmount(100);
+		bid2.setTimeStamp("xx");
+		
+		Bid bid3= new Bid();
+		bid3.setId(1);
+		bid3.setAmount(100);
+		bid3.setTimeStamp("xxx");
+		
+		Set bids= new HashSet();
+		bids.add(bid1);
+		bids.add(bid2);
+		bids.add(bid3);
+		
+		
+	}
+
+}

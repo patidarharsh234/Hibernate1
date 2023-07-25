@@ -1,0 +1,48 @@
+package lazy_eager;
+
+import java.util.Iterator;
+import java.util.Set;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.classic.Session;
+
+import com.rays.auction.Auction;
+import com.rays.auction.Bid;
+
+public class TestLazy_Eager {
+
+	public static void main(String[] args) {
+
+		SessionFactory sf = new Configuration().configure().buildSessionFactory();
+
+		Session sess = sf.openSession();
+		Auction items = (Auction) sess.get(Auction.class, 1L);
+		
+	//	lazy="true" es condition me likhna pada link tabel ke data ko get karvana ke liye:-->
+		
+	/*	Set s = items.getBids();// 
+		Iterator it = s.iterator();
+		while (it.hasNext()) {
+			Bid bid = (Bid) it.next();
+						System.out.println(items.getId());
+			System.out.println(items.getDescription());
+			System.out.println(bid.getId());
+			System.out.println(bid.getAmount());
+			System.out.println(bid.getTimeStamp());
+			System.out.println(bid.getItemId()); 
+			}   */
+		
+		
+
+
+
+
+
+
+		sess.close();
+
+	}
+
+}

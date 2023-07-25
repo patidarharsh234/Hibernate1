@@ -1,0 +1,31 @@
+package com.rays.flush;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.classic.Session;
+
+import com.rays.auction.Bid;
+import com.rays.dto.UserDTO;
+
+public class TestFlush {
+	public static void main(String[] args) {
+        
+		UserDTO dto =new UserDTO();
+		   dto.setId(1);
+		   dto.setFirstName("rudrapratap");
+		   dto.setLastName("singh");
+		   dto.setLoginId("rudrapratap@gmail.com");
+		   dto.setPassword("password");
+		   
+
+
+		SessionFactory sf = new Configuration().configure().buildSessionFactory();
+		Session sess = sf.openSession();
+		Transaction tx = sess.beginTransaction();
+		System.out.println(bid.getId());
+		
+
+	}
+
+}

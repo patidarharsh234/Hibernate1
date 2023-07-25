@@ -1,0 +1,35 @@
+package lazy_eager;
+
+import java.util.Iterator;
+import java.util.Set;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.classic.Session;
+
+import com.rays.auction.Auction;
+
+public class TestLazy_Eager {
+
+	public static void main(String[] args) {
+
+		SessionFactory sf = new Configuration().configure().buildSessionFactory();
+
+		Session sess = sf.openSession();
+		Auction items = (Auction) sess.get(Auction.class, 1L);
+		Set s = items.getBids();
+		Iterator it = s.iterator();
+        while (it.hasNext()) {
+    		System.out.println(items.getId());
+
+    		System.out.println(items.getDescription());
+        	
+        }
+
+
+		sess.close();
+
+	}
+
+}

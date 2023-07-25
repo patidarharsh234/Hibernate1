@@ -1,0 +1,19 @@
+package com.rays.DtoTest;
+
+import org.hibernate.Query;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.classic.Session;
+
+
+public class TestGetCreatQuery {
+	public static void main(String[] args) {
+		
+		SessionFactory sf= new Configuration().configure().buildSessionFactory();
+		               
+		          Session sess=sf.openSession();
+		        Query q =sess.createQuery("from UserDTO where loginId=? and password=?" );
+		
+	}
+
+}

@@ -17,9 +17,10 @@ public class TestGetSomeColumns {
 
 		Session session = sf.openSession();
 
-		 Query query = session.createQuery("select p.id,p.firstName,p.lastName from UserDTO p");
-		
-	//	Query query = session.createSQLQuery("select p.id,p.firstName,p.lastName from UserDTO p");
+		Query query = session.createQuery("select p.id,p.firstName,p.lastName from UserDTO p");
+
+		// Query query = session.createSQLQuery("select p.id,p.firstName,p.lastName from
+		// UserDTO p");
 
 		List list = query.list();
 
@@ -32,12 +33,12 @@ public class TestGetSomeColumns {
 			 * System.out.println(obj[1]); System.out.println(obj[2]);
 			 */
 
-			
-			  UserDTO dto = (UserDTO) it.next(); System.out.println(dto.getId());
-			  System.out.println(dto.getFirstName());
-			  System.out.println(dto.getLastName()); System.out.println(dto.getLoginId());
-			  System.out.println(dto.getPassword());
-			 
+			UserDTO dto = (UserDTO) it.next();
+			System.out.println(dto.getId());
+			System.out.println(dto.getFirstName());
+			System.out.println(dto.getLastName());
+			System.out.println(dto.getLoginId());
+			System.out.println(dto.getPassword());
 
 		}
 	}

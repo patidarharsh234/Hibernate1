@@ -18,9 +18,14 @@
 	<classpathentry kind="lib" path="D:/Hibernate/Hib Jars/hibernate3.jar"/>
 	<classpathentry kind="lib" path="D:/Hibernate/Hib Jars/jaas.jar"/>
 	<classpathentry kind="lib" path="D:/Hibernate/Hib Jars/jta.jar"/>
-	<classpathentry kind="lib" path="D:/Hibernate/Hib Jars/junit-4.12.jar"/>
 	<classpathentry kind="lib" path="D:/Hibernate/Hib Jars/log4j-1.2.11.jar"/>
 	<classpathentry kind="lib" path="D:/Hibernate/Hib Jars/mchange-commons-java-0.2.3.4.jar"/>
 	<classpathentry kind="lib" path="D:/Hibernate/Hib Jars/mysql-connector-java-8.0.29 (1).jar"/>
+	<classpathentry kind="lib" path="C:/Users/Om prakash Patidar/Downloads/hibernate-core-3.6.1.Final.jar"/>
+	<classpathentry kind="lib" path="D:/Hibernate/Hib Jars/junit-4.13.jar" sourcepath="D:/Hibernate/Hib Jars/junit-4.13.jar">
+		<attributes>
+			<attribute name="source_encoding" value="UTF-8"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

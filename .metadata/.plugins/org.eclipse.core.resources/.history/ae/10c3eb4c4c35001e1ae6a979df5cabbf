@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.password">root</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/Hibearnate</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+
+		<!-- onlien search_cache_enable -->
+		<!-- <property name="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.EhCacheProvider</property> 
+			online tarika secound_Level_cache_enable -->
+
+		<!-- cache_enable_proccess  -->
+		<property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+		<property name="hibernate.cache.use_second_level_cache">true</property>
+		<property name="hibernate.cache.use_query_cache">true</property>
+
+
+
+		<!-- <mapping resource="com/rays/namedqueries/NamedQueries.hbm.xml"></mapping> -->
+	<!-- 	<mapping resource="com/rays/dto/UserDTO.hbm.xml"></mapping> -->
+		<mapping resource="com/rays/auction/Bid.hbm.xml" ></mapping> <mapping 
+			resource="com/rays/auction/Auction.hbm.xml" ></mapping>
+		<!-- <mapping resource="com/rays/oneone/Address.hbm.xml" ></mapping> <mapping 
+			resource="com/rays/oneone/Employee.hbm.xml" ></mapping> -->
+
+<mapping resource="com/rays/inheritance/Payment.hbm.xml" ></mapping>
+<mapping resource="com/rays/inheritance/cash.hbm.xml" ></mapping>
+<mapping resource="com/rays/inheritance/CreditCardPayment.hbm.xml" ></mapping>
+<mapping resource="com/rays/inheritance/Cheque.hbm.xml" ></mapping>
+
+
+
+		<!-- secound-level-cache_enable kiya -->
+
+		<!-- <class-cache usage="read-only" class="com.rays.dto.UserDTO" /> -->
+	</session-factory>
+</hibernate-configuration>
+

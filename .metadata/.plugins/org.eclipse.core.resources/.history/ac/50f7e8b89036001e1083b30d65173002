@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 9, 2023, 8:44:07 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.rays.inheritance.TprS.Payment" table="PAYMENT_subClass">
+        <id name="id" type="long"  >
+           <column name="Payment_ID"></column>
+            <generator class="increment" />
+        </id>
+        
+        <property name="amount" type="float">
+            <column name="AMOUNT" />
+        </property>
+        <property name="paymentType" type="java.lang.String">
+            <column name="PAYMENTTYPE" />
+        </property>
+        
+        <joined-subclass name="com.rays.inheritance.TprS.CreditCardPayment" table="CREDIT_PAYMENT">
+        <key column="Payment_ID"/>
+        <property name="ccType" column="cc_Type"></property>
+       </joined-subclass>
+       
+       <joined-subclass name="com.rays.inheritance.TprS.Cheque" table="CHEQUE">
+       <key column="Payment_ID"></key>
+       <property name="chqNumber"  column="ChqueNumber"></property>
+       <property name="bankName" column="bankName"></property>
+       </joined-subclass>
+       
+       <joined-subclass name="com.rays.inheritance.TprS.Cash" table="CASH">
+        <key column="Payment_ID"></key>
+        </joined-subclass>
+       
+    </class>
+</hibernate-mapping>

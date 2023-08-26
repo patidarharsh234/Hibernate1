@@ -1,6 +1,7 @@
 package com.rays.dirtycheak;
 
 import org.hibernate.SessionFactory;
+
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.classic.Session;

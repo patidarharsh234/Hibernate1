@@ -1,4 +1,4 @@
-package com.rays.DtoTest;
+package com.rays.dtotest;
 
 
 import org.hibernate.SessionFactory;
@@ -12,10 +12,10 @@ public class TestDTO {
 	public static void main(String[] args) {
 		
 		UserDTO dto= new UserDTO();
-		dto.setId(3);
+		dto.setId(2);
 		
-		 dto.setFirstName("anjali");
-		 dto.setLastName("shrivastav");
+		 dto.setFirstName("sourabh");
+		 dto.setLastName("anjali");
 		 dto.setLoginId("jate@345");
 		 dto.setPassword("11223344");
 		 

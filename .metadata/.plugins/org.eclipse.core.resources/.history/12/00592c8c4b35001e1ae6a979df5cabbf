@@ -1,0 +1,22 @@
+package com.rays.inheritance;
+
+public class TestInheritance {
+public static void main(String[] args) {
+	
+
+	CreditCardPayment crd=new CreditCardPayment();
+	crd.setAmount(2000);
+	crd.setCcType("Hdfc");
+	crd.setPaymentType("by card");
+	
+	Cheque cheq=new Cheque();
+	cheq.setAmount(3000);
+	cheq.setBankName("Sbi");
+	cheq.setChqNumber("66856790");
+	cheq.setPaymentType("CHEQUE");
+	
+	Cash cash=new Cash();
+	cash.setAmount(5000);
+	cash.setPaymentType("CASH");
+}	
+}

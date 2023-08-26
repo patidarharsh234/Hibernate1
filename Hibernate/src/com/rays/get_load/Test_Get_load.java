@@ -12,9 +12,13 @@ public class Test_Get_load {
 	public static void main(String[] args) {
 		SessionFactory sf = new Configuration().configure().buildSessionFactory();
 		Session sess = sf.openSession();
-
-		//UserDTO items = (UserDTO) sess.get(UserDTO.class, 4);//Sout-null print ho ra
-		UserDTO items = (UserDTO) sess.load(UserDTO.class, 4);//objectNoteFoundExceptio
+		
+		
+		//Sout-null print ho ra
+		// UserDTO items = (UserDTO) sess.get(UserDTO.class, 4);
+		
+		// objectNoteFoundExceptio
+		UserDTO items = (UserDTO) sess.load(UserDTO.class, 4);
 		System.out.println(items);
 		sess.close();
 

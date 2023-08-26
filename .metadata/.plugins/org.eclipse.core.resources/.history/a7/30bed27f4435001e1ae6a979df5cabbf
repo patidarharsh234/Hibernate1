@@ -1,0 +1,9 @@
+package com.rays.inheritance;
+
+public class Payment {
+	
+	private long id;
+	private float amount;
+	private String paymentType;
+
+}

@@ -1,0 +1,8 @@
+package com.rays.inheritance;
+
+public class Cheque extends Payment{
+	
+	private String chqNumber;
+	private String bankName;
+
+}

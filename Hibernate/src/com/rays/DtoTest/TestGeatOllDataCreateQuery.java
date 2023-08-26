@@ -1,4 +1,4 @@
-package com.rays.DtoTest;
+package com.rays.dtotest;
 
 import java.util.Iterator;
 import java.util.List;
